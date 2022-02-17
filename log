@@ -1,0 +1,26 @@
+#!/bin/bash
+
+
+#USAGE log set1 set2 get factor [maximum/minimum] term
+
+
+CURRENT=$($3)
+
+
+echo $CURRENT
+
+
+	
+if [[ $CURRENT -gt $5 ]]
+then
+	NEXT=$((($CURRENT * $4) / 100))
+else
+	NEXT=$(($CURRENT + $6))
+fi
+
+
+echo $NEXT
+
+$1 $NEXT $2
+
+
