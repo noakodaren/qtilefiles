@@ -44,7 +44,7 @@ from shortcuts import keys
 
 
 
-groups = [Group("mail"), Group("browser")]
+groups = [Group("mail", spawn="thunderbird"), Group("browser", spawn="google-chrome-stable")]
 groups.extend( [Group(i) for i in "3456789"] )
 
 keys.extend([
